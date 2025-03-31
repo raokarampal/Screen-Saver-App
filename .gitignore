@@ -1,0 +1,40 @@
+
+*.iml
+.gradle
+.idea
+.kotlin
+.DS_Store
+build
+*/build
+captures
+.externalNativeBuild
+.cxx
+local.properties
+xcuserdata/
+Pods/
+*.jks
+*.gpg
+*yarn.lock
+.junie/
+.junie
+docs/
+docs
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Output files
+out/
+*.class
+.output.txt

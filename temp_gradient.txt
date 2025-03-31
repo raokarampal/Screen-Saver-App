@@ -1,0 +1,229 @@
+                    .meshGradient(
+                        points = listOf(
+                            // Center row - represents the "sun" hidden below the clock card
+                            listOf(
+                                // Left edge of the "sun" (hidden below clock)
+                                Offset(0.3f, 0.5f) to Color(
+                                    red = 0.95f + redAnimatable.value * 0.05f,
+                                    green = 0.6f + greenAnimatable.value * 0.2f,
+                                    blue = 0.2f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.7f
+                                ), // Warm orange glow
+                                // Center of the "sun" (hidden below clock)
+                                Offset(0.5f, 0.5f) to Color(
+                                    red = 1.0f,
+                                    green = 0.9f + greenAnimatable.value * 0.1f,
+                                    blue = 0.5f + blueAnimatable.value * 0.2f,
+                                    alpha = 0.8f
+                                ), // Bright yellow-white center
+                                // Right edge of the "sun" (hidden below clock)
+                                Offset(0.7f, 0.5f) to Color(
+                                    red = 0.95f + redAnimatable.value * 0.05f,
+                                    green = 0.6f + greenAnimatable.value * 0.2f,
+                                    blue = 0.2f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.7f
+                                ), // Warm orange glow
+                            ),
+                            
+                            // Top-left ray
+                            listOf(
+                                // Starting near the center
+                                Offset(0.4f, 0.4f) to Color(
+                                    red = 0.9f + redAnimatable.value * 0.1f,
+                                    green = 0.7f + greenAnimatable.value * 0.2f,
+                                    blue = 0.3f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.6f
+                                ),
+                                // Extending outward
+                                Offset(0.2f, 0.2f) to Color(
+                                    red = 0.8f + redAnimatable.value * 0.1f,
+                                    green = 0.5f + greenAnimatable.value * 0.2f,
+                                    blue = 0.7f + blueAnimatable.value * 0.2f,
+                                    alpha = 0.4f
+                                ),
+                                // Reaching the edge
+                                Offset(0f, 0f) to Color(
+                                    red = 0.6f + redAnimatable.value * 0.1f,
+                                    green = 0.3f + greenAnimatable.value * 0.1f,
+                                    blue = 0.9f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.2f
+                                ),
+                            ),
+                            
+                            // Top ray
+                            listOf(
+                                // Starting near the center
+                                Offset(0.5f, 0.4f) to Color(
+                                    red = 0.9f + redAnimatable.value * 0.1f,
+                                    green = 0.8f + greenAnimatable.value * 0.1f,
+                                    blue = 0.4f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.6f
+                                ),
+                                // Middle of ray
+                                Offset(0.5f, 0.2f) to Color(
+                                    red = 0.7f + redAnimatable.value * 0.1f,
+                                    green = 0.7f + greenAnimatable.value * 0.1f,
+                                    blue = 0.8f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.4f
+                                ),
+                                // Reaching the edge
+                                Offset(0.5f, 0f) to Color(
+                                    red = 0.5f + redAnimatable.value * 0.1f,
+                                    green = 0.5f + greenAnimatable.value * 0.1f,
+                                    blue = 0.9f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.2f
+                                ),
+                            ),
+                            
+                            // Top-right ray
+                            listOf(
+                                // Starting near the center
+                                Offset(0.6f, 0.4f) to Color(
+                                    red = 0.9f + redAnimatable.value * 0.1f,
+                                    green = 0.7f + greenAnimatable.value * 0.2f,
+                                    blue = 0.3f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.6f
+                                ),
+                                // Extending outward
+                                Offset(0.8f, 0.2f) to Color(
+                                    red = 0.8f + redAnimatable.value * 0.1f,
+                                    green = 0.5f + greenAnimatable.value * 0.2f,
+                                    blue = 0.7f + blueAnimatable.value * 0.2f,
+                                    alpha = 0.4f
+                                ),
+                                // Reaching the edge
+                                Offset(1f, 0f) to Color(
+                                    red = 0.6f + redAnimatable.value * 0.1f,
+                                    green = 0.3f + greenAnimatable.value * 0.1f,
+                                    blue = 0.9f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.2f
+                                ),
+                            ),
+                            
+                            // Left ray
+                            listOf(
+                                // Starting near the center
+                                Offset(0.3f, 0.5f) to Color(
+                                    red = 0.9f + redAnimatable.value * 0.1f,
+                                    green = 0.6f + greenAnimatable.value * 0.2f,
+                                    blue = 0.4f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.6f
+                                ),
+                                // Middle of ray
+                                Offset(0.15f, 0.5f) to Color(
+                                    red = 0.7f + redAnimatable.value * 0.1f,
+                                    green = 0.4f + greenAnimatable.value * 0.1f,
+                                    blue = 0.7f + blueAnimatable.value * 0.2f,
+                                    alpha = 0.4f
+                                ),
+                                // Reaching the edge
+                                Offset(0f, 0.5f) to Color(
+                                    red = 0.5f + redAnimatable.value * 0.1f,
+                                    green = 0.2f + greenAnimatable.value * 0.1f,
+                                    blue = 0.9f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.2f
+                                ),
+                            ),
+                            
+                            // Right ray
+                            listOf(
+                                // Starting near the center
+                                Offset(0.7f, 0.5f) to Color(
+                                    red = 0.9f + redAnimatable.value * 0.1f,
+                                    green = 0.6f + greenAnimatable.value * 0.2f,
+                                    blue = 0.4f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.6f
+                                ),
+                                // Middle of ray
+                                Offset(0.85f, 0.5f) to Color(
+                                    red = 0.7f + redAnimatable.value * 0.1f,
+                                    green = 0.4f + greenAnimatable.value * 0.1f,
+                                    blue = 0.7f + blueAnimatable.value * 0.2f,
+                                    alpha = 0.4f
+                                ),
+                                // Reaching the edge
+                                Offset(1f, 0.5f) to Color(
+                                    red = 0.5f + redAnimatable.value * 0.1f,
+                                    green = 0.2f + greenAnimatable.value * 0.1f,
+                                    blue = 0.9f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.2f
+                                ),
+                            ),
+                            
+                            // Bottom-left ray
+                            listOf(
+                                // Starting near the center
+                                Offset(0.4f, 0.6f) to Color(
+                                    red = 0.9f + redAnimatable.value * 0.1f,
+                                    green = 0.7f + greenAnimatable.value * 0.2f,
+                                    blue = 0.3f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.6f
+                                ),
+                                // Extending outward
+                                Offset(0.2f, 0.8f) to Color(
+                                    red = 0.8f + redAnimatable.value * 0.1f,
+                                    green = 0.5f + greenAnimatable.value * 0.2f,
+                                    blue = 0.7f + blueAnimatable.value * 0.2f,
+                                    alpha = 0.4f
+                                ),
+                                // Reaching the edge
+                                Offset(0f, 1f) to Color(
+                                    red = 0.6f + redAnimatable.value * 0.1f,
+                                    green = 0.3f + greenAnimatable.value * 0.1f,
+                                    blue = 0.9f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.2f
+                                ),
+                            ),
+                            
+                            // Bottom ray
+                            listOf(
+                                // Starting near the center
+                                Offset(0.5f, 0.6f) to Color(
+                                    red = 0.9f + redAnimatable.value * 0.1f,
+                                    green = 0.8f + greenAnimatable.value * 0.1f,
+                                    blue = 0.4f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.6f
+                                ),
+                                // Middle of ray
+                                Offset(0.5f, 0.8f) to Color(
+                                    red = 0.7f + redAnimatable.value * 0.1f,
+                                    green = 0.7f + greenAnimatable.value * 0.1f,
+                                    blue = 0.8f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.4f
+                                ),
+                                // Reaching the edge
+                                Offset(0.5f, 1f) to Color(
+                                    red = 0.5f + redAnimatable.value * 0.1f,
+                                    green = 0.5f + greenAnimatable.value * 0.1f,
+                                    blue = 0.9f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.2f
+                                ),
+                            ),
+                            
+                            // Bottom-right ray
+                            listOf(
+                                // Starting near the center
+                                Offset(0.6f, 0.6f) to Color(
+                                    red = 0.9f + redAnimatable.value * 0.1f,
+                                    green = 0.7f + greenAnimatable.value * 0.2f,
+                                    blue = 0.3f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.6f
+                                ),
+                                // Extending outward
+                                Offset(0.8f, 0.8f) to Color(
+                                    red = 0.8f + redAnimatable.value * 0.1f,
+                                    green = 0.5f + greenAnimatable.value * 0.2f,
+                                    blue = 0.7f + blueAnimatable.value * 0.2f,
+                                    alpha = 0.4f
+                                ),
+                                // Reaching the edge
+                                Offset(1f, 1f) to Color(
+                                    red = 0.6f + redAnimatable.value * 0.1f,
+                                    green = 0.3f + greenAnimatable.value * 0.1f,
+                                    blue = 0.9f + blueAnimatable.value * 0.1f,
+                                    alpha = 0.2f
+                                ),
+                            ),
+                        ),
+                        resolutionX = 12, // Increased resolution for smoother rays
+                        resolutionY = 12  // Increased resolution for smoother rays
