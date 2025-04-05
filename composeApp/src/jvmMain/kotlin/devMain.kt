@@ -5,10 +5,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.input.key.*
 import androidx.compose.ui.input.pointer.PointerEventType
 import androidx.compose.ui.input.pointer.onPointerEvent
 import androidx.compose.ui.window.*
+import kotlin.math.abs
 import com.droidslife.screensaver.App
 import com.droidslife.screensaver.clock.ClockViewModel
 import com.droidslife.screensaver.components.ShortcutToast
@@ -133,11 +135,27 @@ fun main() = application {
     ) {
         DevelopmentEntryPoint {
                 // Create a modifier with mouse event handling
+                // Track the last mouse position to detect actual movement
+                var lastMousePosition by remember { mutableStateOf(Offset.Zero) }
+                // Set a threshold for movement detection (in pixels)
+                val movementThreshold = 5f
+
                 val mouseEventModifier = Modifier
                     .onPointerEvent(PointerEventType.Move) {
                         if (exitOnMouseMovementEnabled) {
-                            println("Exiting application due to mouse movement")
-                            exitApplication()
+                            val currentPosition = it.changes.first().position
+
+                            // Only consider it a movement if the position changed by more than the threshold
+                            val deltaX = abs(currentPosition.x - lastMousePosition.x)
+                            val deltaY = abs(currentPosition.y - lastMousePosition.y)
+
+                            if ((deltaX > movementThreshold || deltaY > movementThreshold) && lastMousePosition != Offset.Zero) {
+                                println("Exiting application due to significant mouse movement: dx=$deltaX, dy=$deltaY")
+                                exitApplication()
+                            }
+
+                            // Update the last position
+                            lastMousePosition = currentPosition
                         }
                     }
                     .onPointerEvent(PointerEventType.Press) {
